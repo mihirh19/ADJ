@@ -15,7 +15,7 @@ public class Conn {
             ResultSet res = st.executeQuery("select * from customers");
 
             while (res.next()) {
-                System.out.println(res.getString("cname"));
+                System.out.println(res.getString("cname") + "         " + res.getString("city"));
             }
             st.close();
             con.close();
