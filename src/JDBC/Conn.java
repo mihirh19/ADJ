@@ -17,6 +17,8 @@ public class Conn {
             while (res.next()) {
                 System.out.println(res.getString("cname"));
             }
+            st.close();
+            con.close();
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
