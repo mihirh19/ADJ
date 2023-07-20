@@ -122,11 +122,11 @@ public class CurdJdbc extends JFrame {
         comboBox1 = new JComboBox<>();
         button1 = new JButton();
         label1 = new JLabel();
-        textField1 = new JTextField();
         label2 = new JLabel();
         textField2 = new JTextField();
         label3 = new JLabel();
         textField3 = new JTextField();
+        textField1 = new JTextField();
 
         //======== this ========
         addWindowListener(new WindowAdapter() {
@@ -147,7 +147,7 @@ public class CurdJdbc extends JFrame {
             scrollPane1.setViewportView(textArea1);
         }
         contentPane.add(scrollPane1);
-        scrollPane1.setBounds(0, 205, 520, 195);
+        scrollPane1.setBounds(0, 275, 520, 125);
 
         //---- comboBox1 ----
         comboBox1.setModel(new DefaultComboBoxModel<>(new String[] {
@@ -169,23 +169,23 @@ public class CurdJdbc extends JFrame {
         //---- label1 ----
         label1.setText("First_name");
         contentPane.add(label1);
-        label1.setBounds(35, 80, label1.getPreferredSize().width, 36);
-        contentPane.add(textField1);
-        textField1.setBounds(175, 85, 207, textField1.getPreferredSize().height);
+        label1.setBounds(40, 80, label1.getPreferredSize().width, 36);
 
         //---- label2 ----
         label2.setText("Last_name");
         contentPane.add(label2);
-        label2.setBounds(45, 150, 72, 36);
+        label2.setBounds(40, 180, 72, 36);
         contentPane.add(textField2);
-        textField2.setBounds(180, 150, 207, textField2.getPreferredSize().height);
+        textField2.setBounds(185, 180, 207, textField2.getPreferredSize().height);
 
         //---- label3 ----
         label3.setText("New_first_name");
         contentPane.add(label3);
-        label3.setBounds(30, 120, 120, 35);
+        label3.setBounds(30, 130, 120, 35);
         contentPane.add(textField3);
-        textField3.setBounds(180, 125, 195, textField3.getPreferredSize().height);
+        textField3.setBounds(195, 135, 195, textField3.getPreferredSize().height);
+        contentPane.add(textField1);
+        textField1.setBounds(195, 85, 207, textField1.getPreferredSize().height);
 
         {
             // compute preferred size
@@ -212,11 +212,11 @@ public class CurdJdbc extends JFrame {
     private JComboBox<String> comboBox1;
     private JButton button1;
     private JLabel label1;
-    private JTextField textField1;
     private JLabel label2;
     private JTextField textField2;
     private JLabel label3;
     private JTextField textField3;
+    private JTextField textField1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 
     public static void main(String[] args) {
