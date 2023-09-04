@@ -1,7 +1,6 @@
 package JDBC;
-import JDBC.ConnGui;
+import exp_4.ConnGui;
 
-import javax.xml.transform.Result;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;

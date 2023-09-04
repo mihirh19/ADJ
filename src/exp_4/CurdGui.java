@@ -1,6 +1,4 @@
-package GUI;
-
-import JDBC.ConnGui;
+package exp_4;
 
 import java.awt.*;
 import java.awt.event.*;

@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 
-import JDBC.ConnGui;
+import exp_4.ConnGui;
 public class Exesql extends Frame {
     Choice c;
     Button b;

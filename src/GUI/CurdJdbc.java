@@ -4,7 +4,7 @@
 
 package GUI;
 
-import JDBC.ConnGui;
+import exp_4.ConnGui;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -114,6 +114,7 @@ public class CurdJdbc extends JFrame {
 
     }
 
+
     private void initComponents() {
         setVisible(true);
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
@@ -162,9 +163,11 @@ public class CurdJdbc extends JFrame {
 
         //---- button1 ----
         button1.setText("Execute");
+        button1.setBackground(UIManager.getColor("Button.darkShadow"));
+        button1.setForeground(new Color(0xff3333));
         button1.addActionListener(e -> button1(e));
         contentPane.add(button1);
-        button1.setBounds(295, 20, 128, 42);
+        button1.setBounds(280, 15, 128, 42);
 
         //---- label1 ----
         label1.setText("First_name");
