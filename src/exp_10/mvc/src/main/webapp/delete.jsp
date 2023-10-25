@@ -16,22 +16,14 @@
 <sql:setDataSource var="db" driver="org.postgresql.Driver"
                    url="jdbc:postgresql://localhost:5432/adj"
                    user="postgres"  password="postgres"/>
-<%!
-    String id;
-    String newName;
-%>
-<%
-    id=request.getParameter("ID");
-%>
+
 <sql:update dataSource="${db}" var="rs">
     DELETE FROM DEMO
-    WHERE id = '<%= id %>'
+    WHERE id = ?
+    <sql:param value="${param.ID}"/>
 </sql:update>
 
-<%
-    RequestDispatcher rd=request.getRequestDispatcher("display.jsp");
-    rd.forward(request, response);
-%>
+<jsp:forward page="display.jsp"/>
 
 
 </body>

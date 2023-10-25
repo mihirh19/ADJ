@@ -16,24 +16,15 @@
 <sql:setDataSource var="db" driver="org.postgresql.Driver"
                    url="jdbc:postgresql://localhost:5432/adj"
                    user="postgres"  password="postgres"/>
-<%!
-    String id;
-    String newName;
-%>
-<%
-    id=request.getParameter("ID");
-    newName=request.getParameter("newName");
 
-%>
 <sql:update dataSource="${db}" var="rs">
     UPDATE DEMO
-    SET name = '<%= newName %>'
-    WHERE id = '<%= id %>'
+    SET name = ?
+    WHERE id = ?
+    <sql:param value="${param.newName}"/>
+    <sql:param value="${param.ID}"/>
 
 </sql:update>
-<%
-    RequestDispatcher rd=request.getRequestDispatcher("display.jsp");
-    rd.forward(request, response);
-%>
+<jsp:forward page="display.jsp"/>
 </body>
 </html>
